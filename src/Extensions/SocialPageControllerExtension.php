@@ -22,7 +22,8 @@ class SocialPageControllerExtension extends Extension
     <meta name="twitter:card" content="summary_large_image"> //The card type, which will be one of “summary”, “summary_large_image”, “app”, or “player”.
    
 **/
-        return $metadata;
+        //return $metadata;
+        return "Fred";
     }
     
 }
