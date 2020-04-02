@@ -32,7 +32,7 @@ Here is how to find you GTM code and add it install
 Here is how to add in social media metadata for Facebook, LinkedIn and Twitter
 
 ## Maintainers
- * Josephine Fahy - [https://github.com/curlygeek] (https://github.com/curlygeek)
+ * [Josephine Fahy](https://github.com/curlygeek)
  
 ## Bugtracker
 Bugs are tracked in the issues section of this repository. Before submitting an issue please read over 
