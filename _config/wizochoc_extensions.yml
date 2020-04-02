@@ -9,3 +9,7 @@ Page:
 Silverstripe\SiteConfig\SiteConfig:
   extensions:
     - Honeydukes\Wizochoc\Extensions\SiteConfigExtension
+
+PageController:
+  extensions:
+    - Honeydukes\Wizochoc\Extensions\SocialPageControllerExtension

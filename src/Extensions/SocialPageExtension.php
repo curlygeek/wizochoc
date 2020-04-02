@@ -19,13 +19,6 @@ class SocialPageExtension extends DataExtension
         "TwitterCardType" => 'Enum("Summary, Summary with large image, App, Player")'
     ];
     
-/** FOR REFERENCE WHEN DOING TEMPLATE
-    <meta property="og:title" content="European Travel Destinations">
-    <meta property="og:description" content="Offering tour packages for individuals or groups.">
-    <meta property="og:image" content="http://euro-travel-example.com/thumbnail.jpg">
-    <meta property="og:url" content="http://euro-travel-example.com/index.htm">
-    <meta name="twitter:card" content="summary_large_image"> //The card type, which will be one of “summary”, “summary_large_image”, “app”, or “player”.
-**/
     
     private static $has_one = [
         "SocialMediaImage" => Image::class
@@ -67,6 +60,23 @@ class SocialPageExtension extends DataExtension
             $SocialMediaImage,
             $TwitterCardType
         ]);
+    }
+    
+    public function socialMetadata()
+    {
+        $metadata = '';
+        
+        if ($this->SocialMediaTitle != '') {
+            $metadata += '<meta property="og:title" content="'. $this->SocialMediaTitle . '">';
+        }
+    
+/**<meta property="og:description" content="Offering tour packages for individuals or groups.">
+    <meta property="og:image" content="http://euro-travel-example.com/thumbnail.jpg">
+    <meta property="og:url" content="http://euro-travel-example.com/index.htm">
+    <meta name="twitter:card" content="summary_large_image"> //The card type, which will be one of “summary”, “summary_large_image”, “app”, or “player”.
+   
+**/
+        return $metadata;
     }
     
 }
