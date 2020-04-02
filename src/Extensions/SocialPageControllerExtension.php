@@ -4,6 +4,7 @@ namespace Honeydukes\Wizochoc\Extensions;
 
 use SilverStripe\Core\Extension;
 
+
 class SocialPageControllerExtension extends Extension
 {
 
@@ -12,8 +13,8 @@ class SocialPageControllerExtension extends Extension
     {
         $metadata = '';
         
-        if ($this->SocialMediaTitle != '') {
-            $metadata += '<meta property="og:title" content="'. $this->SocialMediaTitle . '">';
+        if ($this->owner->SocialMediaTitle != '') {
+            $metadata += '<meta property="og:title" content="'. $this->owner->SocialMediaTitle . '">';
         }
     
 /**<meta property="og:description" content="Offering tour packages for individuals or groups.">
@@ -23,7 +24,6 @@ class SocialPageControllerExtension extends Extension
    
 **/
         //return $metadata;
-        return "Fred";
     }
     
 }
