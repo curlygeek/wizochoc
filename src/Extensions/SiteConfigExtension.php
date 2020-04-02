@@ -3,7 +3,7 @@
 namespace Honeydukes\Wizochoc\Extensions;
 
 use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataExtension;
 
 class SiteConfigExtension extends DataExtension 
@@ -15,10 +15,12 @@ class SiteConfigExtension extends DataExtension
 
     public function updateCMSFields(FieldList $fields) 
     {
-        $gtmIdField = new HTMLEditorField("GTMContainerID", "Google Tag Manager container ID");
+        $gtmIdField = new TextField("GTMContainerID", "Google Tag Manager container ID");
         
         $gtmIdField->setDescription('Your GTM container ID will look like this GTM-XXXXXXX.');
         
-        $fields->addFieldToTab("Root.Main", $gtmIdField);
+        $fields->addFieldsToTab('Root.Analytics', [
+            $gtmIdField
+        ]);
     }
 }
