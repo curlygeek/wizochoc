@@ -13,10 +13,11 @@ This module adds some basic reporting and SEO treats to SilverStripe
 * PHP 5.6 or above
 
 ## Installation
-Use composer to install the module. 
+Use composer to install the module then run dev/build.
 
 ```
 composer require honeydukes/wizochoc
+php vendor/silverstripe/framework/cli-script.php dev/build flush=1
 ```
 
 ## License
