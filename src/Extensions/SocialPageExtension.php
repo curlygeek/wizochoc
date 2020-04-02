@@ -66,8 +66,10 @@ class SocialPageExtension extends DataExtension
     {
         $metadata = '';
         
+        die($this->owner->SocialMediaTitle);
+        
         if ($this->owner->SocialMediaTitle != '') {
-            $metadata += '<meta property="og:title" content="'. $this->owner->SocialMediaTitle . '">';
+            $metadata = '<meta property="og:title" content="'. $this->owner->SocialMediaTitle . '">';
         }
     
 /**<meta property="og:description" content="Offering tour packages for individuals or groups.">
