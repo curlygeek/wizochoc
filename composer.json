@@ -1,10 +1,14 @@
 {
-    "name": "silverstripe-module/skeleton",
-    "description": "A skeleton for SilverStripe modules.",
+    "name": "honeydukes/wizochoc",
+    "description": "Adds extra features for SEO, analytics and social media",
     "type": "silverstripe-vendormodule",
     "keywords": [
         "silverstripe",
-        "CMS"
+        "CMS",
+        "seo",
+        "social media",
+        "analytics",
+        "metadata"
     ],
     "license": "BSD-3-Clause",
     "require": {
@@ -17,17 +21,14 @@
     },
     "autoload": {
         "psr-4": {
-            "SilverStripeModule\\Skeleton\\": "src/",
-            "SilverStripeModule\\Skeleton\\Tests\\": "tests/"
+            "Honeydukes\\Wizochoc\\": "src/",
+            "Honeydukes\\Wizochoc\\Tests\\": "tests/"
         }
     },
     "extra": {
         "branch-alias": {
             "dev-master": "2.x-dev"
-        },
-        "expose": [
-            "client/dist"
-        ]
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true

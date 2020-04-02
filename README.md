@@ -1,8 +1,11 @@
-# Wizochoc SEO enhancements for SilverStripe
+# Wizochoc reporting, SEO and social media enhancements for SilverStripe
 
-This module adds some basic SEO treats to SilverStripe
+[![License](http://img.shields.io/packagist/l/silverstripe/userforms.svg?style=flat)](LICENSE.md)
+
+This module adds some basic reporting and SEO treats to SilverStripe
 
 - Google Tag Manager
+- Social media metadata options for every page
 
 ## Requirements
 
@@ -16,24 +19,16 @@ Use composer to install the module.
 composer require honeydukes/wizochoc
 ```
 
-
 ## License
 See [License](license.md)
 
-
 ## Documentation
 
+### Google Tag Manager
+Here is how to find you GTM code and add it install
 
-## Example configuration
-To enable Wizochoc, add the following into a config yaml file (e.g. /app/_config/extensions.yml):
-
-```yaml
-
-Silverstripe\SiteConfig\SiteConfig:
-  extensions:
-    - Honeydukes\Wizochoc\Extensions\SiteConfigExtension
-  
-```
+### Social media metadata
+Here is how to add in social media metadata for Facebook, LinkedIn and Twitter
 
 ## Maintainers
  * Josephine Fahy - [https://github.com/curlygeek] (https://github.com/curlygeek)

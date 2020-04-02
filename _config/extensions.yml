@@ -1,0 +1,11 @@
+---
+Name: extensions
+---
+
+Page:
+  extensions:
+    - Honeydukes\Wizochoc\Extensions\SocialPageExtension
+
+Silverstripe\SiteConfig\SiteConfig:
+  extensions:
+    - Honeydukes\Wizochoc\Extensions\SiteConfigExtension
