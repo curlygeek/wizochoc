@@ -16,7 +16,7 @@ class SocialPageExtension extends DataExtension
     private static $db = [
         "SocialMediaTitle" => "Text",
         "SocialMediaDescription" => "Text",
-        "TwitterCardType" => 'Enum("Summary, Summary with large image, App, Player")'
+        "TwitterCardType" => 'Enum("summary, summary_large_image, app, player")'
     ];
     
     
@@ -64,20 +64,21 @@ class SocialPageExtension extends DataExtension
     
     public function socialMetadata()
     {
-        $metadata = '';
-        
-        die($this->owner->SocialMediaTitle);
+        $metadata = '<meta property="og:url" content="'. $this->owner->Link . '">';
         
         if ($this->owner->SocialMediaTitle != '') {
-            $metadata = '<meta property="og:title" content="'. $this->owner->SocialMediaTitle . '">';
+            $metadata .= '<meta property="og:title" content="'. $this->owner->SocialMediaTitle . '">';
         }
-    
-/**<meta property="og:description" content="Offering tour packages for individuals or groups.">
-    <meta property="og:image" content="http://euro-travel-example.com/thumbnail.jpg">
-    <meta property="og:url" content="http://euro-travel-example.com/index.htm">
-    <meta name="twitter:card" content="summary_large_image"> //The card type, which will be one of “summary”, “summary_large_image”, “app”, or “player”.
-   
-**/
+        if ($this->owner->SocialMediaDescription != '') {
+            $metadata .= '<meta property="og:description" content="'. $this->owner->SocialMediaDescription . '">';
+        }
+        if ($this->owner->SocialMediaImage != '') {
+            $metadata .= '<meta property="og:image" content="'. $this->owner->SocialMediaImage.URL . '">';
+        }
+        if ($this->owner->TwitterCardType != '') {
+            $metadata .= '<meta property="twitter:card" content="'. $this->owner->TwitterCardType . '">';
+        }
+
         return $metadata;
     }
     
