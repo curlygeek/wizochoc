@@ -15,7 +15,9 @@ class SiteConfigExtension extends DataExtension
 
     public function updateCMSFields(FieldList $fields) 
     {
-        $fields->addFieldToTab("Root.Main", new HTMLEditorField("GTMContainerID", "Google Tag Manager container ID")
-        )->setDescription('Your GTM container ID will look like this GTM-XXXXXXX.');
+        $gtmIdField = new HTMLEditorField("GTMContainerID", "Google Tag Manager container ID")
+            ->setDescription('Your GTM container ID will look like this GTM-XXXXXXX.');
+        
+        $fields->addFieldToTab("Root.Main", $gtmIdField);
     }
 }
