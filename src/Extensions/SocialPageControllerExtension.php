@@ -2,7 +2,7 @@
 
 namespace Honeydukes\Wizochoc\Extensions;
 
-use SilverStripe\ORM\Extension;
+use SilverStripe\Core\Extension;
 
 class SocialPageControllerExtension extends Extension
 {
